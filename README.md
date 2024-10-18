@@ -10,7 +10,7 @@ A fun interactive quiz application that allows users to test their knowledge thr
 **Basic HTML structure is present.**
    - **File:** `index.html`
    - **Code Line:** 1-9
-   - its established taht this is a HTML5 document, title, stylesheet is linked etc.
+   - its established that this is a HTML5 document, title, stylesheet is linked etc.
 
 **HTML structure with clear content differentiation (headings, paragraphs, lists).**
    - **File:** `index.html`
@@ -29,7 +29,7 @@ A fun interactive quiz application that allows users to test their knowledge thr
 
 **Consistent use of semantic HTML throughout, ensuring better structure and understanding of the content.**
    - **File:** `index.html`
-   - **Code Line:**11-29
+   - **Code Line:** 11-29
    - Semantic elements like `<header>`, `<main>`, and `<section>` are used.
 
 
@@ -37,7 +37,7 @@ A fun interactive quiz application that allows users to test their knowledge thr
 
 **Basic CSS styling (colors, fonts).**
    - **File:** `styles.css`
-   - **Code Line:**1-7
+   - **Code Line:** 1-7
    - Basic styles are applied: background color, font, text-align font color...
 
 **Use of classes and IDs to style specific elements.**
