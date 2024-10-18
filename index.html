@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pop Quiz</h1>
+        <p>Time to test your knowledge.</p>
+        <img src="boo.png" alt="A fun quiz graphic" style="max-width: 50%; height: auto;" />
+    </header>
+    
+    <main>
+        <section id="quiz-section">
+            <label for="username">Enter your Name:</label>
+            <input type="text" id="username" placeholder="Your Name" required>
+            <form id="quiz-form">
+                <div id="questions-container"></div>
+                <button type="submit">Submit Answers</button>
+            </form>
+            <button id="refresh-quiz">Refresh Questions</button>
+            <div id="result"></div>
+        </section>
+
+        <section id="score-section">
+            <h2>Previous Scores</h2>
+            <table id="score-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="score-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

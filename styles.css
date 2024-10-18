@@ -1,0 +1,152 @@
+/* Body */
+body { 
+    background-color: black;
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #d18787;
+}
+
+/* Sparkles */
+i {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgb(0, 0, 0);
+    pointer-events: none;
+    animation: animate 2s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y));
+    }
+}
+
+/* Header styling */
+header {
+    background-color: #000000;
+    color: rgb(255, 212, 238);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 5em; /* Larger Pop Quiz header */
+    color: rgb(255, 212, 238);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em; /* Make score section smaller */
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+.question {
+    margin-bottom: 60px; /* Increased space between questions */
+    font-family: 'Lobster', cursive; /* Keep question font as Lobster */
+}
+
+/* Answer Choices */
+.answer-choice {
+    font-family: Arial, sans-serif; /* Change the font to Arial for answer choices */
+    font-size: 1em;
+    display: inline-flex;
+    margin: 5px 0; /* Add space between answer options */
+    color: #d18787;
+}
+
+/* Username Input */
+#username {
+    margin-bottom: 40px;
+}
+
+/* Sections */
+section {
+    margin: 20px 0;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Button styling */
+button {
+    background-color: #d18787;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #ffbaf0;
+}
+
+input[type="text"] {
+    border: 2px solid #ffbaf0;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: #d18787;
+}
+
+/* Table styling */
+table {
+    width: 60%; /* Make the score table smaller */
+    margin: 0 auto; /* Keep it centered */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ffbaf0;
+    padding: 10px;
+    text-align: center;
+    color: #d18787;
+    font-family: Arial, sans-serif;
+}
+
+th {
+    background-color: #ffbaf0;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #000000;
+}
+
+/* Change result array color and font */
+#result {
+    color: #d18787;
+    font-family: Arial, sans-serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    table {
+        width: 100%;
+    }
+}
