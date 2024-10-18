@@ -3,6 +3,8 @@
 
 A fun interactive quiz application that allows users to test their knowledge through multiple-choice questions fetched from an external API. 
 
+## Link: https://nidacnr.github.io/pop_quiz/
+
 ## Criteria Fulfillment
 
 ### HTML
