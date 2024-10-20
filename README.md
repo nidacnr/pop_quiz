@@ -39,12 +39,12 @@ A fun interactive quiz application that allows users to test their knowledge thr
 
 **Basic CSS styling (colors, fonts).**
    - **File:** `styles.css`
-   - **Code Line:** 1-7
+   - **Code Line:** 2-8
    - Basic styles are applied: background color, font, text-align font color...
 
 **Use of classes and IDs to style specific elements.**
    - **File:** `styles.css`
-   - **Code Line:** 53, 58
+   - **Code Line:** 52, 57
     Classes are used to apply specific styles to elements.
 
 **Implementation of responsive design elements.**
@@ -54,12 +54,12 @@ A fun interactive quiz application that allows users to test their knowledge thr
 
 **Use of layouts for advanced user interfaces (arrays, float, flexbox, css grid).**
    - **File:** `styles.css`
-   - **Code Line:** 61
+   - **Code Line:** 60
    - Flexbox is used.
 
 **Styling demonstrates a strong grasp of layout principles, aesthetics, and user experience.**
    - **File:** `styles.css`
-   - **Code Line:** 77
+   - **Code Line:** 76
    - button styling improves user interaction and visual appeal.
 
 ---
@@ -68,17 +68,17 @@ A fun interactive quiz application that allows users to test their knowledge thr
 
 **Simple interactions (like alerts on button click).**
    - **File:** `script.js`
-   - **Code Line:** 54
+   - **Code Line:** 53
    - Alert is used to ensure username input is validated.
 
 **Multiple event listeners and basic DOM manipulations.**
    - **File:** `script.js`
-   - **Code Line:** 47, 99, 140
+   - **Code Line:** 47, 96, 136
    - Event listeners handle form submission, refresh button clicks and mouse movement.
 
 **Use of arrays, objects, and functions.**
    - **File:** `script.js`
-   - **Code Line:** 8, 11, 23, 36, 67, 85, 92, 103, 112, 136
+   - **Code Line:** 8, 11, 23, 36, 66, 84, 90, 100, 112, 132
    - Arrays and functions are used to manage quiz questions and user interactions.
 
 **Advanced logic, looping through data, and dynamic DOM updates.**
@@ -91,7 +91,7 @@ A fun interactive quiz application that allows users to test their knowledge thr
 
 **Use of timers.**
    - **File:** `script.js`
-   - **Code Line:** 130
+   - **Code Line:** 127
     -Timer for spark effect
 
 1. **Successful implementation of an AJAX call or Fetch.**
