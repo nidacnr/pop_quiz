@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreBody = document.getElementById('score-body');
     const refreshButton = document.getElementById('refresh-quiz');
 
-    let currentQuestions = []; // Store current questions for score calculation
+    let currentQuestions = [];
 
     // Fetch questions from an external API
     async function fetchQuestions() {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('https://opentdb.com/api.php?amount=5&type=multiple');
             if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
-            currentQuestions = data.results; // Store fetched questions
+            currentQuestions = data.results;
             displayQuestions(currentQuestions);
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayQuestions(questions) {
-        // Clear previous questions
         questionsContainer.innerHTML = '';
         questions.forEach((question, index) => {
             const questionDiv = document.createElement('div');
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const usernameInput = document.getElementById('username');
         const username = usernameInput.value.trim();
 
-        // Validate username
         if (!username) {
             alert('Please enter your name.');
             return;
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .filter(el => el.type === 'radio' && el.checked)
             .map(el => el.value);
 
-        // Get correct answers from the stored questions
         const correctAnswers = currentQuestions.map(question => question.correct_answer);
 
         calculateScore(answers, correctAnswers, username);
@@ -70,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let score = 0;
         let feedbackHTML = '';
 
-        // Compare user's answers with correct answers and generate feedback
         answers.forEach((answer, index) => {
             const correctAnswer = correctAnswers[index];
             if (answer === correctAnswer) {
@@ -88,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveScore(name, score) {
         const row = document.createElement('tr');
         row.innerHTML = `<td>${name}</td><td>${score}</td>`;
-        // Prepend the new score row to the score table
         scoreBody.prepend(row);
     }
 
@@ -98,48 +93,44 @@ document.addEventListener('DOMContentLoaded', () => {
         return textArea.value;
     }
 
-    // Add event listener for the refresh button to reset the quiz
     refreshButton.addEventListener('click', () => {
         resetQuiz();
     });
 
     function resetQuiz() {
-        // Clear the result
         resultDiv.innerHTML = '';
-        // Fetch new questions
         fetchQuestions();
     }
 
-    fetchQuestions(); // Initial fetch of questions
+    fetchQuestions();
 });
 
-// Sparkling Cursor Effect
+// Sparkling Cursor 
 function spark(event) {
-    let i = document.createElement('i'); // Create a new spark element
+    let i = document.createElement('i');
     i.style.position = 'absolute';
     i.style.left = (event.pageX) + 'px';
     i.style.top = (event.pageY) + 'px';
-    i.style.transform = `scale(${Math.random() * 2 + 1})`; // Random scale
+    i.style.transform = `scale(${Math.random() * 2 + 1})`; 
     i.style.setProperty('--x', getRandomTransitionValue());
     i.style.setProperty('--y', getRandomTransitionValue());
 
-    // Style for the sparkle
+    // Style
     i.style.width = '5px';
     i.style.height = '5px';
     i.style.background = 'radial-gradient(circle, #fff, #ff66cc, transparent)';
     i.style.borderRadius = '50%';
     i.style.boxShadow = '0 0 10px rgba(255, 102, 204, 0.8)';
 
-    document.body.appendChild(i); // Add spark to the body
+    document.body.appendChild(i); 
 
     setTimeout(() => {
-        document.body.removeChild(i); // Remove spark after 2 seconds
+        document.body.removeChild(i); 
     }, 2000);
 }
 
-// Generate random transition values for sparkle effect
 function getRandomTransitionValue() {
-    return `${Math.random() * 400 - 200}px`; // Random movement range
+    return `${Math.random() * 400 - 200}px`; // Random movement
 }
 
-document.addEventListener('mousemove', spark); // Attach spark effect to mouse movement
+document.addEventListener('mousemove', spark); 
