@@ -73,7 +73,6 @@ section {
     border-radius: 10px;
 }
 
-/* Button styling */
 button {
     background-color: #ffa2b9;
     color: rgb(0, 0, 0);
@@ -98,7 +97,6 @@ input[type="text"] {
     color: #d18787;
 }
 
-/* Table styling */
 table {
     width: 60%; /* Make the score table smaller */
     margin: 0 auto; /* Keep it centered */
